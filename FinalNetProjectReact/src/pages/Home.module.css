@@ -4,8 +4,8 @@
 }
 
 .innerContainer{
-    margin-left: 270px;
-    margin-top: 60px;
+    margin-left: 200px;
+    margin-bottom: 200px;
 }
 .innerContainer h1{
     font-size: 90px;
@@ -17,6 +17,6 @@
 }
 .buttonContainer{
     position: absolute;
-    top:500px;
+    top:550px;
     right: 600px
 }

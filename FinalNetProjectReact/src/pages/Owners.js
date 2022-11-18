@@ -1,32 +1,29 @@
-import classes from "./PersonApi.module.css";
+import classes from "./Page.module.css";
 import { useRef } from "react";
 import "react-phone-number-input/style.css";
-import PhoneInput from "react-phone-number-input";
 import { useState, useEffect } from "react";
 import arrow from "./../images/arrow.png";
 import trash from "./../images/trashIcon.png";
+import { Link } from 'react-router-dom';
 
-function PersonApi() {
+function Owners() {
   const [valueNum, setValue] = useState();
 
   const firstnameRef = useRef();
   const lastnameRef = useRef();
-  const phonenumberRef = useRef();
-  const emailRef = useRef();
+  const driversRef = useRef();
 
   function submitHandler(event) {
     event.preventDefault();
 
     const enteredFirstName = firstnameRef.current.value;
     const enteredLastName = lastnameRef.current.value;
-    const enteredPhoneNumber = phonenumberRef.current.value;
-    const enteredEmail = emailRef.current.value;
+    const enteredDriversLicense = driversRef.current.value;
 
     const formData = {
       firstName: enteredFirstName,
       lastName: enteredLastName,
-      phoneNumber: enteredPhoneNumber,
-      email: enteredEmail,
+      driversLicense: enteredDriversLicense
     };
 
     console.log(formData);
@@ -36,13 +33,9 @@ function PersonApi() {
       body: JSON.stringify(formData),
     })
       .then((data) => {
-        console.log("New Person Added");
-        // window.location.assign("http://localhost:3000/Login#s=1");
+        console.log("New Owner Added");
       })
       .then(() => getAllEntries());
-
-    //function to handle the inputted data (will be used on API)
-    // props.onAddMeetup(meetupData);
   }
 
   const [personData, setPersonData] = useState();
@@ -107,32 +100,17 @@ function PersonApi() {
               />
             </div>
             <div className={classes.control}>
-              <label htmlFor="address">Phone Number</label>
-              <PhoneInput
-                placeholder="Enter phone number"
-                value={valueNum}
-                ref={phonenumberRef}
-                onChange={setValue}
-                required
-                style={{ width: "71%", marginLeft: "48px" }}
-                maxLength="20"
-              />
-
-              {/* <input type="text" required id="number" ref={phonenumberRef} /> */}
-            </div>
-            <div className={classes.control}>
-              <label htmlFor="description">E-mail</label>
+              <label htmlFor="address">Driver's License</label>
               <input
                 type="text"
                 required
-                id="email"
-                ref={emailRef}
+                id="lastname"
+                ref={driversRef}
                 maxLength="25"
               />
             </div>
-
             <div className={classes.actions}>
-              <button>Add Person</button>
+              <button>Add Owner</button>
             </div>
           </form>
         </div>
@@ -160,11 +138,11 @@ function PersonApi() {
 
                 <div className={classes.datainnerow}>
                   <div className={classes.datainnercolumn}>
-                    Phone Number: <b>{person.phoneNumber}</b>
+                    Driver's License: <b>{person.driversLicense}</b>
                   </div>
-                  <div className={classes.datainnercolumn}>
+                  {/* <div className={classes.datainnercolumn}>
                     E-mail: <b>{person.email}</b>
-                  </div>
+                  </div> */}
                 </div>
                 <div className={classes.trash}>
                   <button onClick={()=> deleteEntry(person)}>
@@ -175,7 +153,13 @@ function PersonApi() {
             ))}
         </div>
       </div>
+      
+      <div className={classes.buttonCont}>
+      <div className={classes.winClwrap}>
+        <Link to="/vehicles" className={classes.winClbtn} type="button" value="Button" style={{textDecoration: "none", color: "black",height: "100px"}}>Vehicles </Link></div>     
+      </div>
+
     </div>
   );
 }
-export default PersonApi;
+export default Owners;

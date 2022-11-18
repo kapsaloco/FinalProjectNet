@@ -12,7 +12,13 @@ function MainNavigation() {
       <nav>
         <ul>
           <li>
-            <Link to="/api" style={{textDecoration: "none"}}>API</Link>
+            <Link to="/owners" style={{textDecoration: "none"}}>Owners</Link>
+          </li>
+          <li>
+            <Link to="/vehicles" style={{textDecoration: "none"}}>Vehicles</Link>
+          </li>
+          <li>
+            <Link to="/claims" style={{textDecoration: "none"}}>Claims</Link>
           </li>
           <li>
             <Link to="/about" style={{textDecoration: "none"}}>About</Link>

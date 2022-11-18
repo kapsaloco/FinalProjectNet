@@ -119,3 +119,41 @@ background: none;
   width: auto;
   height: 40px;
 }
+
+
+.buttonCont{
+  position: absolute;
+  top: 602px;
+  left: 724px;
+
+}
+
+.winClwrap {
+  border: 1px solid #000;
+  display: inline;
+  margin-right: 10px;
+  padding-top: 1px;
+  padding-bottom: 3px;
+  background: #c6c6c6;
+}
+
+.winClbtn {
+  border-left: 1px solid #fff;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #848484;
+  border-bottom: 1px solid #848484;
+  background-color: transparent;
+  padding: 3px 15px 3px 15px;
+}
+
+.winCl-btn:hover,
+.winCl-btn:focus {
+  outline: 0;
+}
+
+.winCl-btn:active {
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  border-left: 1px solid #848484;
+  border-top: 1px solid #848484;
+}
