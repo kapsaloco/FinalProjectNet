@@ -43,7 +43,6 @@ namespace FinalProjectNet.Controllers
         }
 
         // PUT: api/Claims/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutClaims(Guid id, Claims claims)
         {
@@ -74,7 +73,6 @@ namespace FinalProjectNet.Controllers
         }
 
         // POST: api/Claims
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Claims>> PostClaims(Claims claims)
         {

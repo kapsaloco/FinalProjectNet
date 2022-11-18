@@ -43,7 +43,6 @@ namespace FinalProjectNet.Controllers
         }
 
         // PUT: api/Vehicles/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutVehicles(Guid id, Vehicles vehicles)
         {
@@ -74,7 +73,6 @@ namespace FinalProjectNet.Controllers
         }
 
         // POST: api/Vehicles
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Vehicles>> PostVehicles(Vehicles vehicles)
         {
