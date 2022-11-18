@@ -1,0 +1,20 @@
+.bigContainer{
+    
+padding: 50px;
+}
+
+.formContainer {
+    margin-top: 50px;
+    margin-left: 490px;
+    background-color: #faf9f6;
+    height: 400px;
+    width: 500px;
+    border: 1px solid black;
+    border-radius: 1%;
+    padding: 10px;
+  }
+
+  .par{
+    font-size: 20px;
+  }
+

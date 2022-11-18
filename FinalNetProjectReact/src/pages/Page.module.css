@@ -1,0 +1,159 @@
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+  text-align: center;
+}
+
+.formContainer {
+  margin-top: 80px;
+  margin-left: 100px;
+  background-color: #faf9f6;
+  height: 400px;
+  width: 500px;
+  border: 1px solid black;
+  border-radius: 1%;
+}
+
+.form {
+  padding: 1rem;
+}
+
+.control {
+  margin-bottom: 0.5rem;
+  align-content: center;
+}
+
+.control label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.control input {
+  display: block;
+  font: inherit;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 0.25rem;
+  width: 60%;
+  margin: auto;
+  background-color: #faf9f6;
+}
+
+.actions {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.actions button {
+  font: inherit;
+  cursor: pointer;
+  background-color: #2b02a4;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #77002e;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.actions button:hover,
+.actions button:active {
+  background-color: #a50e48;
+  border-color: #a50e48;
+}
+
+.formContainerResults {
+  margin-top: 80px;
+  margin-right: 100px;
+  background-color: #faf9f6;
+  height: 400px;
+  width: 500px;
+  border: 1px solid black;
+  border-radius: 1%;
+  overflow-y: scroll;
+}
+
+.datarow {
+  background-color: white;
+  padding: 1rem;
+  margin: 1rem;
+  height: 60px;
+  border-radius: 5px;
+  box-shadow: 2px 2px rgb(195, 182, 182);
+}
+
+.datainnerow{
+  display: flex;
+}
+
+.datainnercolumn{
+  flex: 50%;
+  text-align: center;
+  margin: 5px;
+}
+
+.arrow{
+  position: absolute;
+  right: 665px;
+  transform: rotate(20deg);
+  bottom: 300px;
+}
+
+.arrow img{
+  width: auto;
+  height: 130px;
+}
+.trash{
+    margin-left: 378px;
+    margin-top: -51px;
+}
+
+.trash button{
+  border: none;
+background: none;
+}
+.trash img{
+  width: auto;
+  height: 40px;
+}
+
+
+.buttonCont{
+  position: absolute;
+  top: 602px;
+  left: 724px;
+
+}
+
+.winClwrap {
+  border: 1px solid #000;
+  display: inline;
+  margin-right: 10px;
+  padding-top: 1px;
+  padding-bottom: 3px;
+  background: #c6c6c6;
+}
+
+.winClbtn {
+  border-left: 1px solid #fff;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #848484;
+  border-bottom: 1px solid #848484;
+  background-color: transparent;
+  padding: 3px 15px 3px 15px;
+}
+
+.winCl-btn:hover,
+.winCl-btn:focus {
+  outline: 0;
+}
+
+.winCl-btn:active {
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  border-left: 1px solid #848484;
+  border-top: 1px solid #848484;
+}
