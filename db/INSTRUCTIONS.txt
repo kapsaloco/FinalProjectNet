@@ -1,0 +1,17 @@
+1. Install docker desktop + docker-compose CLI
+2. Run the following command inside this folder:
+
+docker-compose up --no-recreate -d
+
+This will create one container: a persistent volume for the database, install postgres image, and expose
+the database.
+
+DATABASE PARAMS
+    Name: db_claims
+    Container name: db_claims
+    Exposed port: 5433
+    User: root
+    Password: root
+
+3. Connect to db_claimsdatabase using the previous credentials through your favorite SQL client.
+4. Execute ./Scripts/DDL.sql script file to create the database and table

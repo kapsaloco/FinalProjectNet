@@ -1,0 +1,14 @@
+version: "3"
+services:
+  db_claims:
+    image: postgres
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=db_claims
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata_claims:/var/lib/postgresql/data
+volumes:
+  pgdata_claims:
