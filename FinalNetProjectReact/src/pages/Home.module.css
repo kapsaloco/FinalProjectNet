@@ -1,0 +1,22 @@
+.outsideContainer{
+    display:flex;
+    padding: 10px;
+}
+
+.innerContainer{
+    margin-left: 270px;
+    margin-top: 60px;
+}
+.innerContainer h1{
+    font-size: 90px;
+}
+
+.innerContainer p{
+    text-align: center;
+    font-size: 20px;
+}
+.buttonContainer{
+    position: absolute;
+    top:500px;
+    right: 600px
+}
