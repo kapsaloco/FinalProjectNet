@@ -23,11 +23,12 @@ function Owners() {
     const formData = {
       firstName: enteredFirstName,
       lastName: enteredLastName,
-      driversLicense: enteredDriversLicense
+      driverLicense: enteredDriversLicense,
+      vehicles: []
     };
 
     console.log(formData);
-    fetch("http://localhost:8080/api/person", {
+    fetch("http://localhost:5161/api/owners", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
@@ -45,7 +46,7 @@ function Owners() {
   }, []);
 
   function getAllEntries() {
-    fetch("http://localhost:8080/api/person/", {
+    fetch("http://localhost:5161/api/owners/", {
       method: "GET",
     })
       .then((response) => response.json())
@@ -138,7 +139,7 @@ function Owners() {
 
                 <div className={classes.datainnerow}>
                   <div className={classes.datainnercolumn}>
-                    Driver's License: <b>{person.driversLicense}</b>
+                    Driver's License: <b>{person.driverLicense}</b>
                   </div>
                   {/* <div className={classes.datainnercolumn}>
                     E-mail: <b>{person.email}</b>

@@ -26,17 +26,19 @@ function Vehicles() {
       brand: enteredBrand,
       vin: enteredVin,
       color: enteredColor,
-      year: enteredYear
+      year: enteredYear,
+      owner_id: "acfbbfc9-66bd-4555-9417-9bd5efa25aa4",
+      claims: []
     };
 
     console.log(formData);
-    fetch("http://localhost:8080/api/person", {
+    fetch("http://localhost:5161/api/vehicles", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
     })
       .then((data) => {
-        console.log("New Owner Added");
+        console.log("New Vehicle Added");
       })
       .then(() => getAllEntries());
   }
@@ -48,7 +50,7 @@ function Vehicles() {
   }, []);
 
   function getAllEntries() {
-    fetch("http://localhost:8080/api/person/", {
+    fetch("http://localhost:5161/api/vehicles/", {
       method: "GET",
     })
       .then((response) => response.json())
@@ -143,19 +145,19 @@ function Vehicles() {
               <div className={classes.datarow}>
                 <div className={classes.datainnerow}>
                   <div className={classes.datainnercolumn}>
-                    Brand: <b>{person.firstName}</b>{" "}
+                    Brand: <b>{person.brand}</b>{" "}
                   </div>
                   <div className={classes.datainnercolumn}>
-                    Vin: <b>{person.lastName}</b>
+                    Vin: <b>{person.vin}</b>
                   </div>
                 </div>
 
                 <div className={classes.datainnerow}>
                   <div className={classes.datainnercolumn}>
-                   Color: <b>{person.driversLicense}</b>
+                   Color: <b>{person.color}</b>
                   </div>
                   <div className={classes.datainnercolumn}>
-                    Year: <b>{person.email}</b>
+                    Year: <b>{person.year}</b>
                   </div>
                 </div>
                 <div className={classes.trash}>

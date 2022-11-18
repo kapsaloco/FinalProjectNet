@@ -19,21 +19,23 @@ function Claims() {
     const enteredDescr = descrRef.current.value;
     const enteredStatus = statusRef.current.value;
     const enteredDate = dateRef.current.value;
-
+    const dateformat = new Date(enteredDate).toISOString();
     const formData = {
       description: enteredDescr,
       status: enteredStatus,
-      date: enteredDate
+      date: dateformat,
+      vehicle_id: "4fbdba24-5976-49cc-b9fc-69cead47f8ca"
+      
     };
 
     console.log(formData);
-    fetch("http://localhost:8080/api/person", {
+    fetch("http://localhost:5161/api/claims", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
     })
       .then((data) => {
-        console.log("New Owner Added");
+        console.log("New Claim Added");
       })
       .then(() => getAllEntries());
   }
@@ -45,7 +47,7 @@ function Claims() {
   }, []);
 
   function getAllEntries() {
-    fetch("http://localhost:8080/api/person/", {
+    fetch("http://localhost:5161/api/claims/", {
       method: "GET",
     })
       .then((response) => response.json())
@@ -129,16 +131,16 @@ function Claims() {
               <div className={classes.datarow}>
                 <div className={classes.datainnerow}>
                   <div className={classes.datainnercolumn}>
-                    Description: <b>{person.firstName}</b>{" "}
+                    Description: <b>{person.description}</b>{" "}
                   </div>
                   <div className={classes.datainnercolumn}>
-                    Status: <b>{person.lastName}</b>
+                    Status: <b>{person.status}</b>
                   </div>
                 </div>
 
                 <div className={classes.datainnerow}>
                   <div className={classes.datainnercolumn}>
-                    Date: <b>{person.driversLicense}</b>
+                    Date: <b>{person.date}</b>
                   </div>
                   {/* <div className={classes.datainnercolumn}>
                     E-mail: <b>{person.email}</b>
