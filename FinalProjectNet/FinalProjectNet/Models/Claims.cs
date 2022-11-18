@@ -18,7 +18,7 @@ namespace FinalProjectNet.Models
         [Column("date")]
         public DateTime date { get; set; }
         [Column("vehicle_id", TypeName = "uuid")]
-        public Guid vehicle_id { get; set; }
+        //public Guid vehicle_id { get; set; }
 
         public Claims(Guid id, string description, string status, DateTime date, Guid vehicle_id)
         {
