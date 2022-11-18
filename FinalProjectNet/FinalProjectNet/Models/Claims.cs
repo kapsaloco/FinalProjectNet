@@ -20,15 +20,16 @@ namespace FinalProjectNet.Models
         [Column("vehicle_id", TypeName = "uuid")]
         public Guid vehicle_id { get; set; }
 
-        public Claims(Guid id, string description, string status, DateTime date, Guid vehicle_id)
+
+
+        public Claims() { }
+
+        public Claims(Guid id, string description, string status, DateTime date)
         {
             Id = id;
             this.description = description;
             this.status = status;
             this.date = date;
-            this.vehicle_id = vehicle_id;
         }
-
-        public Claims() { }
     }
 }
